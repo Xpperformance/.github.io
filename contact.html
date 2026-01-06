@@ -1,5 +1,31 @@
 <form action="https://formsubmit.co/x.payet@xpperformance.fr" method="POST">
-  <input type="hidden" name="_next" value="https://xpperformance.fr/merci.html">
-  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Nom -->
+  <input type="text" name="name" placeholder="Nom" required>
+
+  <!-- Email -->
+  <input type="email" name="email" placeholder="Email" required>
+
+  <!-- Message -->
+  <textarea name="message" placeholder="Votre demande" required></textarea>
+
+  <!-- 🔒 Anti-spam invisible -->
   <input type="text" name="_honey" style="display:none">
+
+  <!-- ❌ Désactive le captcha -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- 📩 Objet de l’email reçu -->
+  <input type="hidden" name="_subject" value="Nouveau message XP Performance">
+
+  <!-- 🔁 REDIRECTION APRÈS ENVOI -->
+  <input
+    type="hidden"
+    name="_next"
+    value="https://xpperformance.fr/merci.html"
+  >
+
+  <!-- Bouton -->
+  <button type="submit">Envoyer</button>
+
 </form>
