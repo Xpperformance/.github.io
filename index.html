@@ -1,25 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>XP PERFORMANCE</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XP Performance – Reprogrammation moteur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #e10600;
+      --black: #0e0e0e;
+      --gray: #1c1c1c;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(180deg, var(--black), var(--gray));
+      color: var(--white);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+      background: #000;
+      border-bottom: 2px solid var(--red);
+    }
+
+    header img {
+      height: 70px;
+    }
+
+    nav a {
+      color: var(--white);
+      margin-left: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background: var(--red);
+      transition: 0.3s;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: radial-gradient(circle at top, #2a0000, #000);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 30px auto;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 100px 60px;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: var(--red);
+      text-transform: uppercase;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #0b0b0b;
+      border: 1px solid #222;
+      padding: 30px;
+      border-radius: 16px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(225,6,0,0.35);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: var(--white);
+    }
+
+    .contact {
+      background: linear-gradient(180deg, #000, #120000);
+    }
+
+    .contact p {
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      border-top: 2px solid var(--red);
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Bienvenue sur XP PERFORMANCE</h1>
-<p>XP PERFORMANCE est spécialisé dans l’optimisation moteur, l’E85 et la performance automobile.</p>
-<p>Découvrez nos services et contactez-nous pour plus d’informations.</p>
+  <header>
+    <img src="Logo XP.png" alt="XP Performance logo" />
+    <nav>
+      <a href="#stages">Stages</a>
+      <a href="#e85">E85</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <nav>
-    <ul>
-      <li><a href="e85.html">E85</a></li>
-      <li><a href="stage.html">Stage</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <section class="hero">
+    <h1>XP PERFORMANCE</h1>
+    <p>Spécialiste de la reprogrammation moteur sur mesure. Performance, fiabilité et passion automobile réunies pour exploiter tout le potentiel de votre véhicule.</p>
+  </section>
+
+  <section id="stages">
+    <h2>Stages moteur</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Stage 1</h3>
+        <p>Optimisation électronique sans modification mécanique. Gain de puissance et de couple tout en respectant les tolérances constructeur.</p>
+      </div>
+      <div class="card">
+        <h3>Stage 2</h3>
+        <p>Reprogrammation avancée avec pièces performance (admission, échappement). Sensations accrues et rendement optimisé.</p>
+      </div>
+      <div class="card">
+        <h3>Stage 3</h3>
+        <p>Préparation complète sur projet spécifique : turbo, injecteurs, gestion moteur sur mesure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="e85">
+    <h2>Conversion E85</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Économie</h3>
+        <p>Réduction significative du coût au kilomètre grâce au bioéthanol E85.</p>
+      </div>
+      <div class="card">
+        <h3>Performance</h3>
+        <p>Indice d'octane élevé permettant une combustion plus efficace et plus de couple.</p>
+      </div>
+      <div class="card">
+        <h3>Fiabilité</h3>
+        <p>Cartographies adaptées avec démarrages à froid et protections moteur intégrées.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>
+      📍 Atelier XP PERFORMANCE <br />
+      📞 Téléphone : 06 20 75 02 77 <br />
+      ✉️ Email : x.payet@xpperformance.fr<br /><br />
+      N'hésitez pas à me contacter pour une étude personnalisée de votre véhicule.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 XP Performance – Reprogrammation moteur haute performance
+  </footer>
 
 </body>
 </html>
