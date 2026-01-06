@@ -47,7 +47,15 @@
   height: auto;
   filter: drop-shadow(0 0 15px rgba(225, 6, 0, 0.9));
 }
+.map-marker a {
+  display: inline-block;
+  cursor: pointer;
+}
 
+.map-marker a:hover img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 25px rgba(225, 6, 0, 1));
+}
 
 .btn-contact {
   display: inline-block;
