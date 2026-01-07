@@ -247,4 +247,29 @@ section,
     animation: none;
   }
 }
+@media (max-width: 900px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid .full {
+    grid-column: span 1;
+  }
+
+  .contact {
+    padding: 80px 20px;
+  }
+
+  .btn-send {
+    width: 100%;
+  }
+}
+
+<input
+  type="tel"
+  name="phone"
+  placeholder="Numéro de téléphone (recommandé)"
+  inputmode="tel"
+  pattern="[0-9\s+]+"
+>
 
