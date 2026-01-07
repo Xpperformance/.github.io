@@ -10,6 +10,48 @@
   --white: #ffffff;
   --text-soft: rgba(255,255,255,0.75);
 }
+/* ===============================
+   LIGNES TECHNIQUES BACKGROUND
+================================ */
+
+.bg-lines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  animation: slideLines 40s linear infinite;
+}
+
+.bg-lines::before,
+.bg-lines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+}
+
+/* Ligne courbe gauche */
+.bg-lines::before {
+  background-image:
+    radial-gradient(circle at 10% 30%, transparent 55%, rgba(225,6,0,0.35) 56%, transparent 58%),
+    linear-gradient(90deg, rgba(225,6,0,0.35), rgba(225,6,0,0.05));
+  background-size: 800px 800px, 400px 1px;
+  background-position: left center, 30% 40%;
+}
+
+/* Ligne angulaire droite */
+.bg-lines::after {
+  background-image:
+    linear-gradient(135deg, transparent 48%, rgba(225,6,0,0.4) 50%, transparent 52%),
+    linear-gradient(0deg, rgba(225,6,0,0.25), rgba(225,6,0,0.05));
+  background-size: 600px 600px, 1px 300px;
+  background-position: right top, 75% 60%;
+}
+
+@keyframes slideLines {
+  from { transform: translateX(0); }
+  to { transform: translateX(-40px); }
+}
 
 /* ===============================
    RESET
@@ -18,17 +60,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* ===============================
-   GLOBAL
-================================ */
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--white);
-  background:
-    radial-gradient(800px 400px at 50% -200px, rgba(225,6,0,0.18), transparent 60%),
-    linear-gradient(180deg, #0b0b0b, #000);
 }
 
 /* ===============================
@@ -70,6 +101,20 @@ body {
   max-width: 700px;
   margin-inline: auto;
   color: var(--text-soft);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+  background:
+    radial-gradient(800px 400px at 50% -200px, rgba(225,6,0,0.18), transparent 60%),
+    linear-gradient(180deg, #0b0b0b, #000);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-lines {
+  animation: slideLines 40s linear infinite;
 }
 
 /* ===============================
