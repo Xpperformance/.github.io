@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>XP Performance – Reprogrammation moteur & conversion E85</title>
-  <meta name="description" content="XP Performance, spécialiste de la reprogrammation moteur sur mesure et conversion éthanol E85. Performance, fiabilité et économies.">
+  <meta name="description" content="XP Performance, spécialiste de la reprogrammation moteur sur mesure et conversion éthanol E85.">
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -13,12 +13,12 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Favicon / Logo Google -->
+  <!-- Favicon -->
   <link rel="icon" href="assets/images/logo-xp.png" type="image/png">
 
   <!-- Open Graph -->
   <meta property="og:title" content="XP Performance – Reprogrammation moteur sur mesure">
-  <meta property="og:description" content="Spécialiste de la reprogrammation moteur et conversion éthanol E85">
+  <meta property="og:description" content="Reprogrammation moteur & conversion éthanol E85">
   <meta property="og:image" content="https://xpperformance.fr/assets/images/logo-xp.png">
   <meta property="og:url" content="https://xpperformance.fr">
   <meta property="og:type" content="website">
@@ -182,9 +182,24 @@
   </div>
 </section>
 
+...
 <footer class="footer">
   © 2026 XP PERFORMANCE – Reprogrammation moteur sur mesure
 </footer>
+
+<!-- JS cartes interactives -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.toggle-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.toggle-card').forEach(c => {
+          if (c !== card) c.classList.remove('active');
+        });
+        card.classList.toggle('active');
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
