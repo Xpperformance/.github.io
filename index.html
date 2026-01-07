@@ -26,7 +26,67 @@
 
 <body>
   
-<div class="bg-lines"></div>
+<div class="global-lines">
+  <svg viewBox="0 0 1920 3000"
+       preserveAspectRatio="none"
+       xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+      <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#141414"/>
+        <stop offset="50%" stop-color="#b80000"/>
+        <stop offset="100%" stop-color="#141414"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Ligne 1 -->
+    <path d="M0 300
+             H420
+             C620 300 680 460 860 460
+             H1920"
+          stroke="url(#lineGradient)"
+          stroke-width="1.2"
+          fill="none"/>
+
+    <!-- Ligne 2 -->
+    <path d="M0 700
+             H520
+             C620 700 640 760 720 760
+             H1920"
+          stroke="url(#lineGradient)"
+          stroke-width="1.1"
+          fill="none"/>
+
+    <!-- Ligne 3 -->
+    <path d="M0 1150
+             H360
+             C520 1150 620 1400 820 1400
+             H1920"
+          stroke="url(#lineGradient)"
+          stroke-width="1.3"
+          fill="none"/>
+
+    <!-- Ligne 4 -->
+    <path d="M0 1600
+             H480
+             L620 1600
+             L740 1780
+             H1920"
+          stroke="url(#lineGradient)"
+          stroke-width="1.1"
+          fill="none"/>
+
+    <!-- Ligne 5 -->
+    <path d="M0 2100
+             H300
+             C520 2100 620 2180 820 2180
+             H1920"
+          stroke="url(#lineGradient)"
+          stroke-width="1"
+          fill="none"/>
+
+  </svg>
+</div>
 
 <header class="header">
   <img src="assets/images/logo-xp-transp.png" alt="XP Performance" class="logo">
