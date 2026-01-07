@@ -13,17 +13,6 @@
 /* ===============================
    LIGNES TECHNIQUES BACKGROUND
 ================================ */
-.global-lines {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.global-lines svg {
-  width: 100%;
-  height: 100%;
-}
 
 /* ===============================
    RESET
@@ -75,19 +64,6 @@
   color: var(--text-soft);
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--white);
-  background:
-    radial-gradient(800px 400px at 50% -200px, rgba(225,6,0,0.18), transparent 60%),
-    linear-gradient(180deg, #0b0b0b, #000);
-  position: relative;
-  overflow-x: hidden;
-}
-
-.bg-lines {
-  animation: slideLines 40s linear infinite;
-}
 
 /* ===============================
    SECTIONS
