@@ -23,17 +23,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--white);
-  background:
-    radial-gradient(1200px 600px at 15% -10%, rgba(255,255,255,0.06), transparent 60%),
-    radial-gradient(900px 500px at 85% 20%, rgba(225,6,0,0.05), transparent 65%),
-    linear-gradient(180deg, #0b0b0b 0%, #050505 100%);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
 /* ===============================
    HEADER
 ================================ */
@@ -53,6 +42,12 @@ body {
 }
 
 body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(255,255,255,0.10), transparent 60%),
     radial-gradient(900px 500px at 80% 20%, rgba(225,6,0,0.12), transparent 65%),
@@ -60,14 +55,21 @@ body {
 }
 
 body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
   background-image:
     repeating-linear-gradient(
       0deg,
-      rgba(255,255,255,0.02) 0px,
-      rgba(255,255,255,0.02) 1px,
+      rgba(255,255,255,0.04) 0px,
+      rgba(255,255,255,0.04) 1px,
       transparent 1px,
-      transparent 3px
+      transparent 4px
     );
+
   opacity: 0.35;
 }
 
