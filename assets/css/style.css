@@ -35,18 +35,20 @@
    BANDEAU LOGO HAUT
 ================================ */
 .top-banner {
-  height: 120px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.95);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .top-logo {
-  height: 80px;
-   
+  height: 130px;
+  max-width: 90%;
+  object-fit: contain;
 }
+   
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--white);
@@ -337,15 +339,15 @@ footer {
 ================================ */
 @media (max-width: 900px) {
   .top-banner {
-    height: 90px;
+    height: 120px;
   }
 
   .top-logo {
-    height: 60px;
+    height: 90px;
   }
 
   .hero-image {
-    height: calc(100vh - 90px);
+    height: calc(100vh - 120px);
   }
 
   .hero-overlay h1 {
