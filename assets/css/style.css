@@ -86,36 +86,38 @@ body::before {
 /* ===============================
    HERO IMAGE FULL WIDTH
 ================================ */
-.hero-image {
-  position: relative;
-  height: calc(100vh - 180px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
 .hero-image::before {
   content: "";
   position: absolute;
   inset: 0;
   background:
+    /* Fondu horizontal gauche / droite */
     linear-gradient(
       90deg,
       #050505 0%,
-      rgba(0,0,0,0.45) 15%,
-      rgba(0,0,0,0.45) 85%,
+      rgba(0,0,0,0.75) 12%,
+      rgba(0,0,0,0.45) 35%,
+      rgba(0,0,0,0.45) 65%,
+      rgba(0,0,0,0.75) 88%,
       #050505 100%
     ),
+
+    /* Fondu vertical haut / bas */
+    linear-gradient(
+      180deg,
+      #050505 0%,
+      rgba(0,0,0,0.45) 25%,
+      rgba(0,0,0,0.45) 75%,
+      #050505 100%
+    ),
+
+    /* Image */
     url("../images/virage.jpg") center / cover no-repeat;
-  opacity: 0.8;
+
+  opacity: 0.9;
   z-index: 0;
 }
 
-.hero-overlay {
-  position: relative;
-  z-index: 1;
-}
 /* ===============================
    TEXTE SUR IMAGE
 ================================ */
