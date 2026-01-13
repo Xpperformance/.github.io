@@ -88,9 +88,9 @@ body::before {
 ================================ */
 .hero-image {
   position: relative;
-  height: 70vh;
-  min-height: 420px;
-  max-height: 620px;
+  height: calc(100svh - 180px); /* écran - bandeau logo */
+  min-height: 500px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +110,7 @@ body::before {
       rgba(0,0,0,0.65) 80%,
       #050505 100%
     ),
-    url("assets/images/virage.jpg") center 55% / contain no-repeat;
+    url("assets/images/carbon.png") center 55% / contain no-repeat;
   background-color: #050505;
   z-index: 0;
 }
