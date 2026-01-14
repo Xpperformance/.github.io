@@ -449,3 +449,55 @@ footer {
 html, body {
   overflow-y: auto;
 }
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.accordion-item {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 28px 32px;
+  cursor: pointer;
+}
+
+.accordion-item.active {
+  border-left: 4px solid var(--red);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.accordion-header h3 {
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.price {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 400px;
+  opacity: 1;
+  margin-top: 20px;
+}
