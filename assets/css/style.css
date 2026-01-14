@@ -300,6 +300,8 @@ footer {
   .main-nav a {
     font-size: 0.7rem;
     text-align: center;
+    padding: 6px 4px;
+    line-height: 1.2;
   }
    
   .contact-form button {
