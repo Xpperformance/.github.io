@@ -36,20 +36,14 @@
   </ul>
 </nav>
 
-<header class="top-banner">
-  <img src="assets/images/logo-xp-transp.png" alt="XP Performance" class="top-logo">
-</header>
+<header class="hero">
+  <img src="assets/images/logo-xp-transp.png" alt="XP Performance" class="hero-logo">
 
-<section class="hero-image">
-  <div class="hero-overlay">
-    <h1>
-      REPROGRAMMATION DE MOTEUR SUR MESURE
-    </h1>
-    <p>
-      Performance, fiabilité et passion automobile
-    </p>
+  <div class="hero-content">
+    <h1>REPROGRAMMATION DE MOTEUR SUR MESURE</h1>
+    <p>Performance, fiabilité et passion automobile</p>
   </div>
-</section>
+</header>
 
 <section class="section" id="reprogrammation">
   <h2>Reprogrammation</h2>
@@ -319,17 +313,6 @@
         if (i !== item) i.classList.remove('active');
       });
 
-      item.classList.toggle('active');
-    });
-  });
-</script>
-    
-<script>
-  document.querySelectorAll('.accordion-item').forEach(item => {
-    item.addEventListener('click', () => {
-      document.querySelectorAll('.accordion-item').forEach(i => {
-        if (i !== item) i.classList.remove('active');
-      });
       item.classList.toggle('active');
     });
   });
